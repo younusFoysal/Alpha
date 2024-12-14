@@ -8,7 +8,7 @@ import 'swiper/css/autoplay'
 
 
 
-import { FreeMode, Pagination, Autoplay  } from 'swiper/modules';
+import { FreeMode, Autoplay  } from 'swiper/modules';
 import CarCard from "./CarCard.jsx";
 
 const car = [
@@ -43,7 +43,7 @@ const car = [
         "name": "2021 Mahindra Scorpio S9",
         "price": 1377000,
         "originalPrice": 1398000,
-        "image": "/cars/6.png",
+        "image": "/cars/6.jpg",
         "kilometers": 48000,
         "fuel": "Diesel",
         "transmission": "Manual",
