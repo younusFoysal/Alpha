@@ -49,7 +49,6 @@ const PriceCalculator = () => {
                         textAlign: "center"
                     }}
                 >
-                    <div>Text Here</div>
                 </div>
             </div>
 

@@ -1,12 +1,9 @@
 import React, {useState} from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import {Navigation, Pagination, Thumbs} from "swiper/modules";
-import { Canvas } from "@react-three/fiber";
-import { OrbitControls, useGLTF } from "@react-three/drei";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/thumbs";
-import CarModel from "./CarModel.jsx";
 import Modalbox from "./modal.jsx";
 
 
@@ -29,8 +26,10 @@ const ProductDetails = () => {
 
     const images  = [
         { id: 1, src: "/src/assets/images/car1.png" },
-        { id: 2, src: "/src/assets/images/car1.png" },
-        { id: 3, src: "/src/assets/images/car1.png" },
+        { id: 2, src: "/src/assets/images/car4.png" },
+        { id: 3, src: "/src/assets/images/car3.png" },
+        { id: 4, src: "/src/assets/images/car2.png" },
+
 
     ];
 
@@ -40,7 +39,7 @@ const ProductDetails = () => {
         <div className="flex flex-col md:flex-row p-4 space-y-4 md:space-y-0 md:space-x-8">
 
             {/* Image Carousel */}
-            <div className=" relative w-full max-w-4xl mx-auto p-4">
+            <div className=" relative w-full max-w-3xl mx-auto p-4">
                 {/* Main Carousel */}
                 <Swiper
                     spaceBetween={10}
