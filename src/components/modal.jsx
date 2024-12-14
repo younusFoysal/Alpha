@@ -3,6 +3,7 @@ import "./modal.css"
 import { Canvas } from "@react-three/fiber";
 import { OrbitControls, useGLTF } from "@react-three/drei";
 import CarModel from "./CarModel.jsx";
+import {IoMdArrowRoundBack} from "react-icons/io";
 
 
 // eslint-disable-next-line react/prop-types
@@ -18,23 +19,23 @@ const Modalbox = ({isModalOpen, closeModal}) => {
 
                 <div className="h-full">
 
-                    <div className="flex justify-between items-center">
+                    <div className="flex justify-between items-center flex-col sm:flex-row sm:items-center pt-4">
 
-                        <button onClick={closeModal} className="px-4 py-2 bg-blue-600 text-white rounded-md">
-                            Close 360° View
+                        <button onClick={closeModal}
+                                className="flex justify-center items-center gap-1 px-4 py-2 bg-blue-600 text-white rounded-md shadow-lg mb-4 sm:mb-0">
+                            <IoMdArrowRoundBack/>Close 360° View
                         </button>
 
+                        <h2 className="text-xl font-bold text-center sm:text-left sm:ml-4">Lamborghini Murciélago LP
+                            670</h2>
 
-                        <h2 className="text-xl font-bold ">Lamborghini Murciélago LP 670</h2>
-
-                            <div className="flex flex-col items-baseline">
-                                <span className="text-2xl font-bold">₹ 13.42 Lakh</span>
-                                <span className="text-gray-500 line-through">₹ 13.62 Lakh</span>
-                            </div>
-
-
+                        <div className="flex flex-col items-baseline sm:items-end mt-2 sm:mt-0">
+                            <span className="text-2xl font-bold">₹ 13.42 Lakh</span>
+                            <span className="text-gray-500 line-through">₹ 13.62 Lakh</span>
+                        </div>
 
                     </div>
+
 
                     <div className="border border-gray-950 h-full overflow-hidden rounded-xl mt-5">
 

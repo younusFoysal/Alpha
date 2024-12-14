@@ -33,7 +33,7 @@ const CarCard = ({ car }) => {
             <div className="p-4">
                 <h3 className="font-semibold text-lg mb-2">{car?.name}</h3>
 
-                <div className="flex justify-between items-baseline mb-3">
+                <div className="flex flex-col justify-between items-baseline mb-3">
                     <div>
                         <span className="text-xl font-bold">{formatPrice(car?.price)}</span>
                         {car?.originalPrice > car?.price && (
@@ -47,17 +47,14 @@ const CarCard = ({ car }) => {
                     </div>
                 </div>
 
-                <div className="grid grid-cols-2 gap-2 text-sm mb-3 sm:grid-cols-3 lg:grid-cols-2">
-                    <div className="flex items-center gap-1 text-gray-600">
-                        <span className="font-medium">{car?.kilometers} km</span>
-                    </div>
-                    <div className="flex items-center gap-1 text-gray-600">
-                        <span className="font-medium">{car?.fuel}</span>
-                    </div>
-                    <div className="flex items-center gap-1 text-gray-600">
-                        <span className="font-medium">{car?.transmission}</span>
-                    </div>
+                <div className="flex gap-4 text-sm text-gray-600 my-5">
+                    <span>{car?.kilometers} km</span>
+                    <span>•</span>
+                    <span>{car?.fuel}</span>
+                    <span>•</span>
+                    <span>{car?.transmission}</span>
                 </div>
+
 
                 <div className="flex items-start gap-1 text-gray-500 text-sm">
                     <MapPin className="w-4 h-4 mt-0.5 flex-shrink-0"/>

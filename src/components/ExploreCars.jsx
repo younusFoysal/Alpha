@@ -79,7 +79,7 @@ const car = [
     },
     {
         "id": "6",
-        "name": "2019 Maruti Suzuki Vitara Brezza ZDi+",
+        "name": "2019 Maruti Suzuki Vitara",
         "price": 950000,
         "originalPrice": 990000,
         "image": "/src/assets/cars/8.jpg",
@@ -124,8 +124,8 @@ const ExploreCars = () => {
         <div className="w-full p-6  mb-10">
             <h1 className="text-2xl font-bold mb-6 text-blue-900">Explore Cars</h1>
 
-            <div>
-                <div className="my-10 mb-16">
+
+                <div className="my-3 mb-4">
                     <Swiper
                         slidesPerView={1}
                         spaceBetween={30}
@@ -137,7 +137,8 @@ const ExploreCars = () => {
                         //autoplay={false}
                         pagination={false}
                         modules={[FreeMode, Autoplay]}
-                        className="mb-4 h-full"
+                        //modules={[FreeMode]}
+                        className="swiper-slide mb-4 h-full z-4"
                         breakpoints={{
                             640: {
                                 slidesPerView: 2,
@@ -157,7 +158,7 @@ const ExploreCars = () => {
                         }
                     </Swiper>
                 </div>
-            </div>
+
 
 
         </div>

@@ -6,11 +6,15 @@ import CarOverview from "./components/CarOverview.jsx";
 import CarDetails from "./components/CarDetails.jsx";
 import ProductCarousel from "./components/ProductCarousel.jsx";
 import ExploreCars from "./components/ExploreCars.jsx";
+import Faq from "./components/Faq.jsx";
+import Footer from "./components/Footer.jsx";
 
 const App = () => {
     return (
         <div className="max-w-screen-2xl mx-auto">
+
             <Navbar></Navbar>
+
 
             <div className="flex flex-col md:flex-row p-4 space-y-4 md:space-y-0 md:space-x-4">
 
@@ -43,6 +47,8 @@ const App = () => {
             </div>
 
             <ExploreCars/>
+            <Faq/>
+            <Footer/>
 
 
         </div>
