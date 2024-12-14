@@ -107,7 +107,7 @@ const ProductDetails = () => {
             {/* Product Details */}
             <div className="flex items-center justify-center">
                 <CarDetails
-                    title="Murciélago LP 670–4 SuperVeloce Petrol AT 4WD"
+                    title="Lamborghini Murciélago LP 670–4 SuperVeloce Petrol AT 4WD"
                     distance="30K km"
                     fuelType="Petrol"
                     transmission="Automatic"

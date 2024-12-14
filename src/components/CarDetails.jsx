@@ -3,6 +3,7 @@ import { Heart, Mail, CheckCircle, Info, ChevronRight } from 'lucide-react';
 
 
 
+// eslint-disable-next-line react/prop-types
 const CarDetails = ({title, distance, fuelType, transmission, location, price, originalPrice, emi, discount, shortlistedCount,}) => {
     return (
         <div className="w-full mx-auto bg-white rounded-lg shadow-md p-6">
