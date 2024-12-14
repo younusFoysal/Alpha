@@ -5,6 +5,7 @@ import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/thumbs";
 import Modalbox from "./modal.jsx";
+import CarDetails from "./CarDetails.jsx";
 
 
 
@@ -36,7 +37,7 @@ const ProductDetails = () => {
 
 
     return (
-        <div className="flex flex-col md:flex-row p-4 space-y-4 md:space-y-0 md:space-x-8">
+        <div className="flex flex-col md:flex-row p-4 space-y-4 md:space-y-0 md:space-x-4">
 
             {/* Image Carousel */}
             <div className=" relative w-full max-w-3xl mx-auto p-4">
@@ -65,7 +66,7 @@ const ProductDetails = () => {
                                     onClick={openModal}
                                     className="absolute bottom-4 left-1/2 transform -translate-x-1/2 bg-gray-800 text-white px-4 py-2 rounded hover:bg-gray-700 z-10"
                                 >
-                                    Click to View 360°
+                                    View 360°
                                 </button>
                             )}
 
@@ -108,17 +109,7 @@ const ProductDetails = () => {
             </div>
 
             {/* Product Details */}
-            <div className="w-full md:w-1/2 space-y-4">
-                <h1 className="text-2xl font-bold">Car Model XYZ</h1>
-                <p className="text-gray-600">Price: $25,000</p>
-                <p className="text-gray-800">
-                    This is a detailed description of the car. It highlights its features,
-                    specifications, and other details that make it an attractive choice.
-                </p>
-                <button className="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600">
-                    Add to Cart
-                </button>
-            </div>
+            <CarDetails/>
         </div>
     );
 };
