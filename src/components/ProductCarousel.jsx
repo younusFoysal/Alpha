@@ -27,10 +27,10 @@ const ProductCarousel = () => {
 
 
     const images  = [
-        { id: 1, src: "/src/assets/images/car1.png" },
-        { id: 2, src: "/src/assets/images/car4.png" },
-        { id: 3, src: "/src/assets/images/car3.png" },
-        { id: 4, src: "/src/assets/images/car2.png" },
+        { id: 1, src: "/images/car1.png" },
+        { id: 2, src: "/images/car4.png" },
+        { id: 3, src: "/images/car3.png" },
+        { id: 4, src: "/images/car2.png" },
 
 
     ];
