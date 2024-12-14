@@ -5,6 +5,7 @@ import PriceCalculator from "./components/PriceCalculator.jsx";
 import CarOverview from "./components/CarOverview.jsx";
 import CarDetails from "./components/CarDetails.jsx";
 import ProductCarousel from "./components/ProductCarousel.jsx";
+import ExploreCars from "./components/ExploreCars.jsx";
 
 const App = () => {
     return (
@@ -40,6 +41,8 @@ const App = () => {
                 </div>
 
             </div>
+
+            <ExploreCars/>
 
 
         </div>

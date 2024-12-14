@@ -65,9 +65,9 @@ const ProductCarousel = () => {
                             {activeIndex === 0 && (
                                 <button
                                     onClick={openModal}
-                                    className="absolute flex justify-center gap-2  items-center shadow-lg bottom-4 left-1/2 transform -translate-x-1/2 bg-blue-800 text-white px-4 py-2 rounded hover:bg-sky-700 z-10"
+                                    className="absolute w-44 flex justify-center gap-2  items-center shadow-lg bottom-4 left-1/2 transform -translate-x-1/2 -translate-y-2 bg-blue-800 text-white px-4 py-2 rounded hover:bg-sky-700 z-10"
                                 >
-                                    <span className=" text-sm md:text-sm sm:text-sm flex gap-2"> Click to View 360° <LuRotate3D className="mt-1" /> </span>
+                                    <span className=" text-sm md:text-sm sm:text-sm flex md:gap-2"> Click to View 360° <LuRotate3D className="mt-1" /> </span>
                                 </button>
                             )}
 
