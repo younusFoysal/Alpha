@@ -12,25 +12,31 @@ const Modalbox = ({isModalOpen, closeModal}) => {
 
 
     return (
-        <div className=" modal-overlay" style={isModalOpen ? {top: "0"} : {}}>
+        <div className=" modal-overlay overflow-hidden" style={isModalOpen ? {top: "0"} : {}}>
 
-            <div className="modal-content">
+            <div className="modal-content h-full">
 
-                <div className="">
+                <div className="h-full">
 
                     <div className="flex justify-between items-center">
 
-                        <button onClick={closeModal} className="close-modal-button">
-                            Close
+                        <button onClick={closeModal} className="px-4 py-2 bg-blue-600 text-white rounded-md">
+                            Close 360° View
                         </button>
 
 
-                        <h2 className="text-blue-700">Modal Title</h2>
-                        <p className="text-blue-700">This is the modal content.</p>
+                        <h2 className="text-xl font-bold ">Lamborghini Murciélago LP 670</h2>
+
+                            <div className="flex flex-col items-baseline">
+                                <span className="text-2xl font-bold">₹ 13.42 Lakh</span>
+                                <span className="text-gray-500 line-through">₹ 13.62 Lakh</span>
+                            </div>
+
+
 
                     </div>
 
-                    <div className="border border-gray-950 h-screen mt-5">
+                    <div className="border border-gray-950 h-full overflow-hidden rounded-xl mt-5">
 
                         <Canvas camera={{position: [3, 3, 7], fov: 50}}>
                             <ambientLight intensity={2}/>

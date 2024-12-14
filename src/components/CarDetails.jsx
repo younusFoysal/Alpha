@@ -6,12 +6,12 @@ import { Heart, Mail, CheckCircle, Info, ChevronRight } from 'lucide-react';
 // eslint-disable-next-line react/prop-types
 const CarDetails = ({title, distance, fuelType, transmission, location, price, originalPrice, emi, discount, shortlistedCount,}) => {
     return (
-        <div className="w-full mx-auto bg-white rounded-lg shadow-md p-6">
+        <div className="w-full mx-auto bg-white rounded-xl shadow-sm border border-gray-100 p-6">
             {/* Header */}
             <div className="flex justify-between items-start mb-3">
-                <h2 className="text-xl font-bold text-blue-900">{title}</h2>
-                <button className="text-gray-400 hover:text-red-500 flex-col justify-center items-center">
-                    <Heart className="w-6 h-6 items-center"/>
+                <h2 className="text-2xl font-extrabold text-blue-900">{title}</h2>
+                <button className=" text-gray-400 hover:text-sky-500 flex-col justify-center items-center">
+                    <Heart className="w-6 h-6 mx-auto items-center"/>
                     <span className="text-xs">{shortlistedCount} people shortlisted</span>
                 </button>
             </div>
@@ -63,11 +63,11 @@ const CarDetails = ({title, distance, fuelType, transmission, location, price, o
 
             {/* Action Buttons */}
             <div className="flex gap-4">
-                <button className="flex-1 bg-blue-700 text-white py-3 rounded-md font-semibold hover:bg-blue-800">
-                    BOOK NOW
+                <button className="flex-1 bg-blue-700 text-white py-3 rounded-md font-semibold hover:bg-blue-800 shadow-lg">
+                    BUY NOW
                     <div className="text-xs">100% refundable</div>
                 </button>
-                <button className="flex-1 bg-sky-500 text-white py-3 rounded-md font-semibold hover:bg-sky-600">
+                <button className="flex-1 bg-sky-500 text-white py-3 rounded-md font-semibold hover:bg-sky-600 shadow-lg">
                     FREE TEST DRIVE
                 </button>
             </div>

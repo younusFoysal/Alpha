@@ -6,6 +6,7 @@ import "swiper/css/navigation";
 import "swiper/css/thumbs";
 import Modalbox from "./modal.jsx";
 import CarDetails from "./CarDetails.jsx";
+import {LuRotate3D} from "react-icons/lu";
 
 
 
@@ -14,7 +15,7 @@ import CarDetails from "./CarDetails.jsx";
 
 
 
-const ProductDetails = () => {
+const ProductCarousel = () => {
 
     const [thumbsSwiper, setThumbsSwiper] = React.useState(null);
     const [activeIndex, setActiveIndex] = useState(0);
@@ -36,8 +37,8 @@ const ProductDetails = () => {
 
 
 
-    return (
-        <div className="flex flex-col md:flex-row p-4 space-y-4 md:space-y-0 md:space-x-4">
+    return (<>
+
 
             {/* Image Carousel */}
             <div className=" relative w-full max-w-3xl mx-auto p-4">
@@ -64,9 +65,9 @@ const ProductDetails = () => {
                             {activeIndex === 0 && (
                                 <button
                                     onClick={openModal}
-                                    className="absolute bottom-4 left-1/2 transform -translate-x-1/2 bg-gray-800 text-white px-4 py-2 rounded hover:bg-gray-700 z-10"
+                                    className="absolute flex justify-center gap-2  items-center shadow-lg bottom-4 left-1/2 transform -translate-x-1/2 bg-blue-800 text-white px-4 py-2 rounded hover:bg-sky-700 z-10"
                                 >
-                                    View 360°
+                                    <span className=" text-sm md:text-sm sm:text-sm flex gap-2"> Click to View 360° <LuRotate3D className="mt-1" /> </span>
                                 </button>
                             )}
 
@@ -104,23 +105,9 @@ const ProductDetails = () => {
 
             </div>
 
-            {/* Product Details */}
-            <div className="flex items-center justify-center">
-                <CarDetails
-                    title="Lamborghini Murciélago LP 670–4 SuperVeloce Petrol AT 4WD"
-                    distance="30K km"
-                    fuelType="Petrol"
-                    transmission="Automatic"
-                    location="Spinny Car Hub, Universal Trade Tower, Sector 49, Gurgaon"
-                    price={13.42}
-                    originalPrice={13.62}
-                    emi={24798}
-                    discount={20000}
-                    shortlistedCount={45}
-                />
-            </div>
-        </div>
+
+        </>
     );
 };
 
-export default ProductDetails;
+export default ProductCarousel;

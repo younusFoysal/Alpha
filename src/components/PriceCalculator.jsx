@@ -102,6 +102,13 @@ const PriceCalculator = () => {
                                 value={invitesNumber}
                                 onChange={(e) => setInvitesNumber(Number(e.target.value))}
                                 className="w-full h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer accent-blue-600"
+                                style={{
+                                    background: `linear-gradient(to right, #2563EB 0%, #2563EB ${
+                                        ((invitesNumber - 1000) / (50000 - 1000)) * 100
+                                    }%, #E5E7EB ${
+                                        ((invitesNumber - 1000) / (50000 - 1000)) * 100
+                                    }%, #E5E7EB 100%)`,
+                                }}
                             />
                         </div>
 
@@ -117,11 +124,18 @@ const PriceCalculator = () => {
                                 value={duration}
                                 onChange={(e) => setDuration(Number(e.target.value))}
                                 className="w-full h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer accent-blue-600"
+                                style={{
+                                    background: `linear-gradient(to right, #2563EB 0%, #2563EB ${
+                                        ((duration - 6) / (84 - 6)) * 100
+                                    }%, #E5E7EB ${
+                                        ((duration - 6) / (84 - 6)) * 100
+                                    }%, #E5E7EB 100%)`,
+                                }}
                             />
                         </div>
 
                         <button
-                            className="w-full bg-blue-600 text-white py-3 rounded-lg font-medium flex items-center justify-center gap-2 hover:bg-blue-700 transition-colors">
+                            className="w-full bg-blue-600 text-white py-3 rounded-lg font-medium shadow-lg flex items-center justify-center gap-2 hover:bg-blue-700 transition-colors">
                             <FaIndianRupeeSign size={15}/>
                             PAY NOW
                         </button>
