@@ -45,7 +45,7 @@ const ProductDetails = () => {
                 <Swiper
                     spaceBetween={10}
                     navigation={true}
-                    pagination={{ clickable: true }}
+                    pagination={{clickable: true}}
                     thumbs={{swiper: thumbsSwiper}}
                     modules={[Navigation, Thumbs, Pagination]}
                     onSlideChange={(swiper) => setActiveIndex(swiper.activeIndex)}
@@ -69,7 +69,6 @@ const ProductDetails = () => {
                                     View 360°
                                 </button>
                             )}
-
 
 
                         </SwiperSlide>
@@ -103,13 +102,23 @@ const ProductDetails = () => {
                 <Modalbox isModalOpen={isModalOpen} closeModal={closeModal}></Modalbox>
 
 
-
-
-
             </div>
 
             {/* Product Details */}
-            <CarDetails/>
+            <div className="flex items-center justify-center">
+                <CarDetails
+                    title="Murciélago LP 670–4 SuperVeloce Petrol AT 4WD"
+                    distance="30K km"
+                    fuelType="Petrol"
+                    transmission="Automatic"
+                    location="Spinny Car Hub, Universal Trade Tower, Sector 49, Gurgaon"
+                    price={13.42}
+                    originalPrice={13.62}
+                    emi={24798}
+                    discount={20000}
+                    shortlistedCount={45}
+                />
+            </div>
         </div>
     );
 };
