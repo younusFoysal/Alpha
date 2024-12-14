@@ -1,14 +1,22 @@
 import React from "react";
-import Slider from "react-slick";
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Navigation, Thumbs } from "swiper/modules";
+import "swiper/css";
+import "swiper/css/navigation";
+import "swiper/css/thumbs";
+
+
 
 const ProductDetails = () => {
-    const carImages = [
-        "/images/car1.jpg",
-        "/images/car2.jpg",
-        "/images/car3.jpg",
-        "/images/car4.jpg",
+
+    const [thumbsSwiper, setThumbsSwiper] = React.useState(null);
+
+    const images  = [
+        "/src/assets/images/car1.png",
+        "/src/assets/images/car2.png",
+        "/src/assets/images/car3.png",
+        "/src/assets/images/car4.png",
+        "/src/assets/images/car5.png",
     ];
 
     const settings = {
@@ -22,19 +30,48 @@ const ProductDetails = () => {
 
     return (
         <div className="flex flex-col md:flex-row p-4 space-y-4 md:space-y-0 md:space-x-8">
+
             {/* Image Carousel */}
-            <div className="w-full md:w-1/2">
-                <Slider {...settings}>
-                    {carImages.map((image, index) => (
-                        <div key={index} className="p-2">
+            <div className="w-full max-w-4xl mx-auto p-4">
+                {/* Main Carousel */}
+                <Swiper
+                    spaceBetween={10}
+                    navigation={true}
+                    thumbs={{swiper: thumbsSwiper}}
+                    modules={[Navigation, Thumbs]}
+                    className="w-full rounded-lg"
+                >
+                    {images.map((image, index) => (
+                        <SwiperSlide key={index}>
                             <img
                                 src={image}
-                                alt={`Car ${index + 1}`}
-                                className="w-full h-auto rounded-lg"
+                                alt={`Car Image ${index + 1}`}
+                                className="w-full object-cover rounded-lg"
                             />
-                        </div>
+                        </SwiperSlide>
                     ))}
-                </Slider>
+                </Swiper>
+
+                {/* Thumbnail Carousel */}
+                <Swiper
+                    onSwiper={setThumbsSwiper}
+                    spaceBetween={10}
+                    slidesPerView={4}
+                    freeMode={true}
+                    watchSlidesProgress={true}
+                    modules={[Thumbs]}
+                    className="mt-4"
+                >
+                    {images.map((image, index) => (
+                        <SwiperSlide key={index}>
+                            <img
+                                src={image}
+                                alt={`Thumbnail ${index + 1}`}
+                                className="cursor-pointer object-cover rounded-lg"
+                            />
+                        </SwiperSlide>
+                    ))}
+                </Swiper>
             </div>
 
             {/* Product Details */}
