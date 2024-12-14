@@ -21,7 +21,7 @@ const ProductCarousel = () => {
     const [activeIndex, setActiveIndex] = useState(0);
     const [isModalOpen, setModalOpen] = useState(false);
 
-    // Handlers for opening and closing modal
+    // Handlers for opening and closing 3d object modal
     const openModal = () => setModalOpen(true);
     const closeModal = () => setModalOpen(false);
 
@@ -42,7 +42,7 @@ const ProductCarousel = () => {
 
             {/* Image Carousel */}
             <div className=" relative w-full max-w-3xl mx-auto p-4">
-                {/* Main Carousel */}
+
                 <Swiper
                     spaceBetween={10}
                     navigation={true}
